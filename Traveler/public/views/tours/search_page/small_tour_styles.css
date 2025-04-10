@@ -1,0 +1,106 @@
+.small-tour-list .tour-wrapper {
+    position: relative;
+    width: 25%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+    transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.small-tour-list .tour-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.small-tour-list .tour {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    background-color: #fcfcfc;
+}
+
+
+.small-tour-list .tour .cover {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.small-tour-list .tour .cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-tour-list .save-button {
+    background-color: #fcfcfc;
+    z-index: 2;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.small-tour-list .save-button svg {
+    width: 25px;
+    height: 25px;
+}
+
+.tour-view .stars {
+    display: flex;
+    column-gap: -2px;
+}
+
+.small-tour-list .stars span {
+    font-size: 20px;
+    color: darkorange;
+}
+
+.small-tour-list .tour-info {
+    width: 100%;
+    height: 50%;
+    padding: 5px 15px 15px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.small-tour-list .tour-info .description {
+    font-size: 14px;
+    color: gray;
+}
+
+.small-tour-list .tour-info .name,
+.small-tour-list .tour-info .price {
+    font-weight: 500;
+}
+
+.small-tour-list .tour-info .name {
+    font-size: 18px;
+}
+
+.small-tour-list .tour-info .price {
+    font-size: 20px;
+}
+
+.small-tour-list .tour-info .name-wrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+
+}
+
+.small-tour-list .tour-info .price-wrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    row-gap: 2px;
+}

@@ -1,0 +1,408 @@
+.checkout-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin-bottom: 50px;
+}
+
+.checkout .progress {
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.checkout .progress .bg {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout .progress .bg .line {
+    width: calc(100% - 100px);
+    height: 2px;
+    background-color: lightgray;
+}
+
+.checkout .progress .label {
+    position: relative;
+    z-index: 2;
+    background-color: #fcfcfc;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.checkout .progress .label .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout .progress .label .icon svg {
+    fill: darkorange;
+}
+
+.checkout .progress .label.current {
+    font-weight: 500;
+}
+
+.checkout .progress .label.next {
+    color: gray;
+}
+
+.checkout .progress .label.next svg {
+    fill: lightgray;
+}
+
+.checkout .grid {
+    display: flex;
+    column-gap: 25px;
+}
+
+.checkout .grid .left {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.checkout .tour {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.checkout .tour:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.checkout .checkout-form {
+    width: 100%;
+    height: 100%;
+}
+
+.checkout .booking-details {
+    width: 30%;
+}
+
+.checkout .tour img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.checkout .tour .stars {
+    display: flex;
+    column-gap: -2px;
+}
+
+.checkout .tour .stars span {
+    font-size: 20px;
+    color: darkorange;
+}
+
+.checkout .tour .name-wrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.checkout .tour .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.checkout .description {
+    font-size: 14px;
+    color: gray;
+}
+
+.checkout .info-wrapper {
+    width: 100%;
+    padding: 5px 15px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.checkout .info-wrapper .rooms {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+.checkout .info-wrapper .rooms .room {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.checkout .info-wrapper .rooms .room > *:nth-child(1) {
+    width: 20px;
+    text-align: center;
+}
+
+.checkout .info-wrapper .rooms .room > *:nth-child(2) {
+    width: 20px;
+}
+
+.checkout .info-wrapper .rooms .room > *:nth-child(3) {
+    width: 100%;
+    text-align: left;
+}
+
+.checkout .info-wrapper .rooms .room > * {
+    font-size: 16px;
+}
+
+.checkout .booking-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 20px 10px;
+}
+
+.checkout .booking-details h2 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.checkout .booking-details .line {
+    width: 60%;
+    border-bottom: 2px dashed lightgray;
+    transform: scaleX(1.5);
+}
+
+.checkout .booking-details .booking-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.checkout .booking-details .booking-info .grid-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-items: right;
+    column-gap: 10px;
+}
+
+.checkout .booking-details .booking-info .grid-row .text {
+    width: 100%;
+    text-align: center;
+}
+
+.checkout .booking-details .booking-info .bold {
+    width: 100%;
+    text-align: right;
+    font-weight: 500;
+}
+
+.checkout .booking-details .price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.checkout .booking-details .price-info .grid-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 15px 20px 15px 1fr;
+    justify-items: center;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 14px;
+}
+
+.checkout .booking-details .price-info .name {
+    width: 100%;
+    text-align: left;
+}
+
+.checkout .booking-details .price-info .cost {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.checkout .booking-details .price-info .icon {
+    font-size: 12px;
+}
+
+.checkout .booking-details .total-price {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.checkout .booking-details .total-price-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 10px;
+}
+
+
+.checkout .booking-details .total-price .text {
+    font-size: 20px;
+}
+
+.checkout .booking-details .total-price .price {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.checkout .checkout-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    row-gap: 25px;
+}
+
+.checkout .checkout-form h2 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.checkout .checkout-form .icon-input {
+    width: 400px;
+}
+
+.checkout .checkout-form .icon-input input {
+    font-size: 17px;
+}
+
+.checkout .checkout-form .accent-button {
+    height: 50px;
+    width: 200px;
+}
+
+.checkout .checkout-form .description {
+    width: 65%;
+    text-align: center;
+}
+
+.checkout .checkout-form .user-info {
+    height: 100%;
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    row-gap: 25px;
+}
+
+.checkout .checkout-form .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.checkout .checkout-form .row button {
+    width: 150px;
+}
+
+.checkout .checkout-form .user-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.checkout .checkout-form .user-info-wrapper .text {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.checkout .checkout-form .user-info-wrapper .status-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.checkout .checkout-form .user-info-wrapper .status-wrapper .icon {
+    display: flex;
+    align-items: center;
+}
+
+.checkout .checkout-form .user-info-wrapper .status-wrapper .icon.pending svg {
+    fill: darkorange;
+}
+
+.checkout .checkout-form .user-info-wrapper .status-wrapper .icon.denial svg {
+    fill: #db5858;
+}
+
+.checkout .checkout-form .user-info-wrapper .status-wrapper .icon.check svg {
+    fill: rgb(0, 169, 64);
+}
+
+.checkout .checkout-form .user-info-wrapper .user {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.checkout .checkout-form .user-info-wrapper .user:hover {
+    background-color: #f0f0f0;
+}
+
+.checkout .checkout-form .user-info-wrapper .user .pfp {
+    height: 30px;
+    width: 30px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    overflow: hidden;
+
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+}

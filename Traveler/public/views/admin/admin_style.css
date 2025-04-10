@@ -1,0 +1,152 @@
+.admin-page {
+}
+
+.admin-page h1 {
+    height: 100px;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.admin-page .admin {
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.admin-page .admin .row {
+    width: 100%;
+    display: flex;
+    column-gap: 25px;
+}
+
+.admin-page .admin .country-admin-wrapper,
+.admin-page .admin .tour-facilities-wrapper,
+.admin-page .admin .room-facilities-wrapper {
+    width: 100%;
+}
+
+.edit-button,
+.delete-button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    color: gray;
+    transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.edit-button svg,
+.delete-button svg {
+    width: 75%;
+    height: 75%;
+    fill: gray;
+    transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #FCF0E2;
+}
+
+.edit-button:hover svg {
+    fill: black;
+}
+
+.delete-button:hover svg {
+    fill: #db5858;
+}
+
+.admin-page .page-admin {
+    width: 100%;
+    height: 100px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.admin-page .page-admin h2 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.admin-page .page-admin a {
+    width: 250px;
+}
+
+.admin-page .page-admin a svg {
+    fill: #1E1F22;
+}
+
+.admin-page .tour-admin-wrapper {
+    width: 100%;
+    min-width: 400px;
+    height: 500px;
+}
+
+.admin-page .booking-admin-wrapper {
+    width: 100%;
+    min-width: 400px;
+}
+
+.admin-page .line {
+    width: 55%;
+    border-bottom: 2px dashed lightgray;
+    transform: scaleX(1.5);
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+}
+.admin-page h2 {
+    font-weight: 500;
+}
+
+.admin-page .left,
+.admin-page .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.admin-page .description {
+    font-size: 14px;
+    color: gray;
+}
+
+.admin-page .user-admin-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.admin-page .search {
+    position: relative;
+}
+
+.admin-page .search input {
+    font-size: 16px;
+}
+
+.admin-page .search .icon {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+

@@ -1,0 +1,16 @@
+#sortable-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sortable-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.drag-handle {
+    cursor: grab;
+}

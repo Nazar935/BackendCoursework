@@ -1,0 +1,123 @@
+.price-filter {
+    width: 100% !important;
+    row-gap: 0 !important;
+}
+
+.price-filter h3 {
+    margin-bottom: 10px !important;
+}
+
+.price-filter .filter-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-filter .price-text {
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+}
+
+.price-filter .price-text .left,
+.price-filter .price-text .right {
+    width: 100%;
+}
+
+.price-filter .price-text .left {
+    text-align: right;
+}
+
+.price-filter .price-text .right {
+    text-align: left;
+}
+
+.price-filter .price-text .middle {
+    width: 20%;
+}
+
+.price-filter .price-range {
+    position: relative;
+    width: 50%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-filter .price-range > * {
+}
+
+.price-filter .price-range .middle,
+.price-filter .price-range .middle-shadow {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+}
+
+.price-filter .price-range .middle-shadow {
+    z-index: 0;
+    background-color: lightgray;
+}
+
+.price-filter .price-range .left,
+.price-filter .price-range .right {
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    cursor: grab;
+}
+
+.price-filter .price-range .left div,
+.price-filter .price-range .right div {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: darkorange;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+}
+
+.price-filter .price-range .left {
+    left: 0;
+    transform: translateX(-10px);
+}
+
+.price-filter .price-range .right {
+    right: 0;
+    transform: translateX(10px);
+}
+
+.price-filter .price-range .right:after,
+.price-filter .price-range .left:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    border-radius: 100px;
+    background-color: rgba(255, 140, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+    transition: 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.price-filter .price-range .right:active:after,
+.price-filter .price-range .left:active:after {
+    transform: scale(2);
+}
+
+.price-filter .price-range .right:active,
+.price-filter .price-range .left:active {
+    cursor: grabbing;
+}

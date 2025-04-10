@@ -1,0 +1,110 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-page {
+    min-width: 800px;
+    width: 80%;
+    margin: 50px 0;
+    display: flex;
+    column-gap: 50px;
+}
+
+.search-page .search-results {
+    position: relative;
+    width: 70%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+    border-radius: 10px;
+    background: #fff;*/
+}
+
+.search-page .search-results .page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.search-page .search-results .page:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.small-tour-list .tour-wrapper {
+    width: 100% !important;
+    height: 200px !important;
+
+}
+
+.search-page .search-results .page.show .tour-wrapper {
+    animation: tour-show-animation 0.3s forwards cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes tour-show-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-25px) scale(102%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.small-tour-list .page.remove .tour-wrapper {
+    animation: tour-remove-animation 0.3s forwards cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes tour-remove-animation {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(25px) scale(98%);
+    }
+}
+
+.small-tour-list .tour-wrapper .tour {
+    width: 100% !important;
+    display: flex;
+}
+
+.small-tour-list .tour-wrapper .tour .cover {
+    height: 100%;
+    width: 30%;
+}
+
+.small-tour-list .tour-wrapper .tour .tour-info {
+    width: 70%;
+    height: 100%;
+    padding: 10px 15px 10px 10px;
+}
+
+.small-tour-list .tour .name {
+    font-size: 22px;
+}
+
+.small-tour-list .tour .price {
+    font-size: 22px;
+}
+
+.small-tour-list .tour-wrapper .save-button svg {
+    width: 30px;
+    height: 30px;
+}
+
+.search-page .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}

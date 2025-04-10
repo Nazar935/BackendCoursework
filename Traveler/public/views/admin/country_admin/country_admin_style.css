@@ -1,0 +1,89 @@
+.country-admin {
+    width: 100%;
+    min-width: 300px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.country-admin h2 {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-weight: 500;
+}
+
+.country-admin .countries {
+    width: 90%;
+    height: 250px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: lightgray transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.country-admin .country {
+    width: 100%;
+    margin: 0;
+    background-color: #fcfcfc;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.country-admin .country .index {
+    width: 5%;
+}
+
+.country-admin .country .image-wrapper {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.country-admin .country .text {
+    width: 40%;
+}
+
+.country-admin .country .button-wrapper {
+    width: 15%;
+}
+
+.country-admin .country img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.country-admin .country-add-button {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.country-admin .line {
+    width: 55%;
+    border-bottom: 2px dashed lightgray;
+    transform: scaleX(1.5);
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+}
+
+
+
+
+

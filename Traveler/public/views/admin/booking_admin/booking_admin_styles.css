@@ -1,0 +1,38 @@
+.booking-admin {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 25px;
+}
+
+.booking-admin h2 {
+    margin: 10px;
+}
+
+.booking-admin .pending-list {
+    position: relative;
+    min-height: 75px;
+    height: 100%;
+    max-height: max-content;
+}
+
+.booking-admin .history-list {
+    min-height: 25px;
+    height: 100%;
+    max-height: max-content;
+}
+
+.booking-admin .pending-list .placeholder {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+

@@ -1,0 +1,192 @@
+.tours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tours .flex-tours {
+    padding: 50px 0;
+    width: 70%;
+    min-height: 490px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 50px;
+    column-gap: 75px;
+}
+
+.tours .flex-tours .country {
+    width: 400px;
+    height: 225px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.tours .flex-tours .country .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.tours .flex-tours .country .bg video,
+.tours .flex-tours .country .bg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tours .flex-tours .country .bg .filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.tours .flex-tours .country .country-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    top: calc(50% - 25px);
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.tours .flex-tours .country .country-header a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border-radius: 10px;
+    /*backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);*/
+    padding: 5px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.tours .flex-tours .country .country-header a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+}
+
+.tours .flex-tours .country .country-header .flag {
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+}
+
+.tours .flex-tours .country .country-header .flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tours .flex-tours .country .country-header .name {
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 30px;
+
+
+    color: #fcfcfc;
+    text-shadow: rgba(0, 0, 0, 0.80) 0 5px 15px;
+}
+
+
+.tours .flex-tours .country:hover .bg .filter {
+    opacity: 1;
+}
+
+.tours .flex-tours .country:hover .country-header {
+    top: 10px
+}
+
+.tours .flex-tours .country .cities-scroll-bar {
+    z-index: 1;
+    width: 95%;
+    height: calc(100% - 70px);
+    position: absolute;
+    bottom: -100%;
+
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: lightgray transparent;
+    scroll-behavior: smooth;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.tours .flex-tours .country:hover .cities-scroll-bar {
+    bottom: 10px;
+}
+
+.tours .flex-tours .country .cities {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 12px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    row-gap: 12px;
+}
+
+.tours .flex-tours .country .cities .city-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tours .flex-tours .country .cities a {
+    width: auto;
+    height: 40px;
+    padding: 5px 10px 5px 5px;
+    border-radius: 5px;
+    color: #fcfcfc;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    transition: all 0.15s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.tours .flex-tours .country .cities a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+}
+
+.tours .flex-tours .country .cities a .flag {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tours .flex-tours .country .cities a .flag img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tours .flex-tours .country .cities a .name {
+    width: 75%;
+    font-size: 16px;
+}
+

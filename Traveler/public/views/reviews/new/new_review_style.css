@@ -1,0 +1,360 @@
+.new-review {
+    position: relative;
+}
+
+.new-review .hide {
+    display: none !important;
+}
+
+.new-review .check-params {
+    //width: 70% !important;
+    position: absolute;
+    opacity: 0;
+}
+
+#new-review-form {
+    width: 100%;
+    transition: height 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+
+#new-review-form .form-content {
+    transition: height 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+    width: 100%;
+    margin-bottom: 25px;
+
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+}
+
+#new-review-form h2 {
+    margin: 0;
+}
+
+.new-review .new-button {
+
+
+    //background-image: linear-gradient(92.88deg, #fcae4e 9.16%, darkorange 43.89%, #f58802 64.72%);
+    background-image: linear-gradient(45deg, #fcae4e , darkorange 10%, #f58802 20%, #77d102 80%, #40d102 100%);
+    background-size: 500% 100%;
+    background-position-x: 0%;
+    border-radius: 5px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 16px;
+}
+
+.new-review .new-button i {
+    font-size: 30px;
+}
+
+.new-review .new-button:hover {
+    box-shadow: rgba(50, 50, 93, 0.5) 0 1px 32px;
+    transition-duration: .25s;
+}
+
+.new-review .new-button:active {
+    transform: scale(99%) translateY(2px);
+    transition-duration: .2s;
+}
+
+@media (min-width: 768px) {
+    .button-36 {
+        padding: 0 2.6rem;
+    }
+}
+
+.new-review-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    column-gap: 50px;
+}
+
+.new-review {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.new-review-wrapper .line {
+    position: relative;
+    width: 15%;
+    display: flex;
+}
+
+.new-review-wrapper .line.left {
+    justify-content: right;
+}
+
+.new-review-wrapper .line.right {
+    justify-content: left;
+}
+
+.new-review-wrapper .line:after {
+    content: "";
+    height: calc(100% + 20px);
+    position: absolute;
+    top: -10px;
+    width: 4px;
+    background-color: gray;
+    border-radius: 2px;
+}
+
+#hide-review-form-button {
+    outline: none;
+    background: none;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    width: 100%;
+}
+
+#hide-review-form-button i {
+    transform: rotate(90deg);
+    color: lightgray;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#hide-review-form-button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#hide-review-form-button:hover i {
+    color: #53536E;
+}
+
+.new-review .new-button {
+    width: 220px;
+    height: 64px;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-review .new-button > span {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem 1.6rem;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.new-review .new-button > span span {
+    width: 80%;
+}
+
+.new-review .new-button > span i {
+    width: 20%;
+}
+
+.new-review .new-button.changed-bg {
+    background-position-x: 100%;
+}
+
+.new-review textarea {
+    font-size: 15px;
+    width: 80%;
+    height: 9em;
+    padding: 5px 10px;
+
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: rgba(0, 0, 0, 0.85);
+    transition: all 250ms;
+
+    outline: none;
+    resize: none;
+}
+
+#new-review-form textarea:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#new-review-form textarea:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 8px 16px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#new-review-form .form-header {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: -15px;
+}
+
+#new-review-form .new-photo-list {
+    width: 80%;
+    display: flex;
+    column-gap: 25px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+#new-review-form .new-photo-list .photo-wrapper {
+    position: relative;
+    height: 75px;
+    width: 75px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    animation: newPhotoAnimation 0.3s cubic-bezier(0.76, 0, 0.24, 1) alternate;
+}
+
+#new-review-form .new-photo-list .photo-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#new-review-form .new-photo-list .photo-wrapper:hover,
+#new-review-form .new-photo-list .add:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+#new-review-form .new-photo-list .add {
+    width: 75px;
+    height: 75px;
+    border: 4px dashed #c2c2c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: none;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#new-review-form .new-photo-list .add i {
+    color: #c2c2c2;
+    font-size: 40px;
+}
+
+#new-review-form .new-photo-list .add input {
+    display: none;
+}
+
+@keyframes newPhotoAnimation {
+    0% {
+        transform: scale(120%) translateY(-10px);
+    }
+}
+
+#new-review-form .new-photo-list .photo-wrapper button.delete-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom-left-radius: 5px;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    background-color: rgba(0, 0, 0, 0.20);
+    opacity: 0;
+}
+
+#new-review-form .new-photo-list .photo-wrapper button.delete-photo i {
+    font-size: 20px;
+    color: lightgray;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+}
+
+#new-review-form .new-photo-list .photo-wrapper button.delete-photo:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+#new-review-form .new-photo-list .photo-wrapper:hover button.delete-photo {
+    opacity: 1;
+}
+
+.new-review {
+}
+
+.new-review .drag-image {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 16px dashed darkgray;
+    border-radius: 32px;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    color: darkgray;
+}
+
+.new-review.drag .drag-image  {
+    display: flex;
+    animation: drag-start-animation 0.3s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.new-review.drag .drag-image.drag-end {
+    display: flex;
+    animation: drag-end-animation 0.3s cubic-bezier(0.76, 0, 0.24, 1)  forwards;
+}
+
+@keyframes drag-start-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes drag-end-animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.new-review .new-photo-text {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+}

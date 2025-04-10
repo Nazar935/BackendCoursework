@@ -1,0 +1,364 @@
+.reviews {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px 25px 0px;
+}
+
+.reviews .page-header {
+    margin: 0;
+    padding: 0;
+    height: 125px;
+}
+
+.reviews .reviews-component {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+}
+
+.reviews .reviews-box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.reviews .review {
+    display: flex;
+    flex-direction: column;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 25px;
+}
+
+.reviews .review .author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: gray;
+}
+
+.reviews .review .author .left {
+    display: flex;
+    column-gap: 50px;
+}
+
+.reviews .review .author .pfp {
+    height: 50px;
+    width: 50px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    overflow: hidden;
+
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.reviews .review .line {
+    width: 39%;
+    border: 2px dashed lightgray;
+    transform: scaleX(2.5);
+    margin: 25px auto;
+}
+
+.reviews .review .text {
+    color: #53536E;
+    font-size: 20px;
+    padding: 0 25px;
+}
+
+.reviews .review .photo-list {
+    height: 100px;
+    display: flex;
+    padding: 0 50px;
+    column-gap: 50px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.reviews .review .photo-list .review-photo {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.reviews .review .photo-list .review-photo:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.reviews .review .photo-list .review-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviews .review .photo-list .review-photo div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    text-shadow: 0px 0px 4px black;
+    color: #fcfcfc;
+    backdrop-filter: blur(4px);
+}
+
+.reviews .read-more {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    border: none;
+    background: none;
+    color: gray;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.reviews .read-more:hover {
+    cursor: pointer;
+    color: #1E1F22;
+    transform: translateY(-1px);
+}
+
+.reviews .read-more:hover i {
+    color: #1E1F22;
+}
+
+.reviews .read-more:active {
+    transform: scale(98%);
+}
+
+.reviews .read-more i {
+    color: gray;
+    font-size: 25px;
+    transform: rotateZ(90deg);
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.reviews .button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.reviews .read-more.clicked i {
+    transform: rotateZ(270deg);
+}
+
+.reviews .review .text {
+    position: relative;
+    transition: height 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.reviews .review.full-text .text {
+    -webkit-line-clamp: unset;
+}
+
+.reviews .review .text.hidden {
+    left: 0;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    transition: unset;
+}
+
+.reviews .review.full-text .text.hidden {
+    display: block;
+}
+
+.reviews .review:not(.full-text) .text.hidden {
+    display: -webkit-box;
+}
+
+.review .right {
+    display: flex;
+    column-gap: 50px;
+}
+
+.review .right .delete-button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.review .right .delete-button {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.review .right .delete-button i {
+    font-size: 32px;
+    color: #a9a9a9;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.review .right .delete-button:hover {
+    cursor: pointer;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.review .right .delete-button:hover i {
+    color: #e80202;
+}
+
+.review .right .delete-button:active, .review .right .delete-button.clicked {
+    transform: scale(95%) translateY(-2px);
+}
+
+.review a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.reviews .page-slider {
+    margin: 25px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.reviews .page-slider a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightgray;
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.reviews .page-slider div {
+    text-decoration: none;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews .page-slider a.current-page {
+    font-size: 18px;
+    transform: translateY(-4px);
+
+    background-image: linear-gradient(92.88deg, #fcae4e 9.16%, darkorange 43.89%, #f58802 64.72%);
+    border-radius: 5px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.reviews .page-slider a:not(.disabled):hover {
+    transform: translateY(-4px);
+}
+
+.reviews .page-slider a.disabled {
+    background-color: lightgray;
+}
+
+.reviews .page-slider a.disabled i {
+    color: #fcfcfc !important;
+}
+
+.reviews .page-slider a.left i,
+.reviews .page-slider a.right i {
+    color: darkorange;
+    font-size: 30px;
+}
+
+.review-wrapper {
+    position: relative;
+}
+
+.review-wrapper .review {
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.review-wrapper .review.deleted {
+    opacity: 0;
+    transform: translateY(10px) scale(90%);
+}
+
+.reviews .delete-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    opacity: 0;
+    color: #e80202;
+    animation: delete-icon-animation 1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+    animation-delay: 0.3s;
+}
+
+.reviews .delete-icon i {
+    font-size: 100px;
+}
+
+@keyframes delete-icon-animation {
+    0% {
+        transform: translateY(-10px) scale(110%);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0) scale(100%);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: rgba(232, 2, 2, 0.50) 0 8px 20px;
+    }
+}

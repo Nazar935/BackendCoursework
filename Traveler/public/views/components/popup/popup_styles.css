@@ -1,0 +1,126 @@
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.show,
+.popup.hide {
+    display: flex;
+}
+
+.popup.hide .popup-bg {
+    display: flex;
+    animation: popup-hide-animation forwards 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.popup.show .popup-bg {
+    display: flex;
+    animation: popup-show-animation forwards 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes popup-show-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popup-hide-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.popup.hide .popup-bg {
+    opacity: 0;
+}
+
+.popup .popup-bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup .window {
+    position: relative;
+    min-width: 350px;
+    min-height: 215px;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 1px 10px;
+}
+
+.popup.show .window {
+    animation: window-show-animation forwards 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.popup.hide .window {
+    animation: window-hide-animation forwards 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes window-show-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(105%);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes window-hide-animation {
+    100% {
+        transform: translateY(50px) scale(95%);
+        opacity: 0;
+    }
+}
+
+.popup .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.popup .close-button:hover {
+    background-color: rgba(255, 140, 0, 0.25);
+}
+
+.popup .close-button svg {
+    width: 100%;
+    height: 100%;
+    fill: lightgray;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.popup .close-button:hover svg {
+    fill: gray;
+}
+
+.popup .content {
+    padding: 40px 10px 20px 10px;
+}

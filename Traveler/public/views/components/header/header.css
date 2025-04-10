@@ -1,0 +1,408 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    top: 0;
+    left: 0;
+    //border-bottom: 2px solid gray;
+    z-index: 9999;
+}
+
+.header-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fcfcfc;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+}
+
+.header-wrapper > * {
+    height: 100%;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+}
+
+.header .logo {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.header .logo * {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 50px;
+    color: black;
+}
+
+.main-menu {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-a {
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+
+.main-menu .header-a-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-a{
+    width: max-content ;
+}
+
+.header-a .icon {
+    display: flex;
+}
+
+.header-a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: darkorange;
+    height: 3px;
+    bottom: 6px;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.header-a:hover::before, .header-a.current-page::before {
+    transform: scaleX(1);
+}
+
+.header-a.current-page i,  .header-a.current-page {
+    color: darkorange !important;
+}
+
+.user-menu {
+    width: 30%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*margin-left: -36px;*/
+}
+
+.header .icon i {
+    font-size: 30px;
+    color: gray;
+}
+
+.header .icon i {
+    width: 50%;
+    transition: color .3s;
+}
+
+.user-menu .icon {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.header .dashed-line {
+    height: 50%;
+    border-right: 3px dashed gray;
+    color: lightgray;
+    transform: scaleY(1.5);
+}
+
+.header .admin-menu {
+    width: 22%;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.logo a {
+    position: relative;
+}
+
+.logo .main-logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.logo .main-logo > * {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a:hover .main-logo {
+    transform: translate3d(200%, 0, 0);
+}
+
+.logo a:hover .plane-wrapper {
+    transform: translate3d(0, 0, 0);
+}
+
+.plane-wrapper {
+    --planeColor: darkorange;
+    --size: 80px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transform: translate3d(-200%, 0, 0);
+    transition: transform .5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.plane {
+    width: var(--size);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.plane-trail {
+    width: 100%;
+    margin-right: -5px;
+    border-top: 3px dashed var(--planeColor);
+    height: 1px;
+}
+
+.planeBody,
+.planeBody * {
+    background: var(--planeColor);
+}
+.planeBody {
+    position: relative;
+
+    width: 75%;
+    aspect-ratio: 7/1;
+
+    border-bottom-left-radius: 50% 100%;
+    border-top-right-radius: 25% 90%;
+    border-bottom-right-radius: 20% 20%;
+}
+.planeTail,
+.wingLeft,
+.wingRight {
+    position: absolute;
+}
+.planeTail {
+    left: calc(-0.3% + 1px);
+    top: -120%;
+
+    width: 15%;
+    aspect-ratio: 1/1.25;
+
+    transform: skewX(5deg) translateX(-5%);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 100% 100%;
+}
+.wingLeft,
+.wingRight {
+    left: 50%;
+    width: 25%;
+    aspect-ratio: 1;
+}
+.wingLeft {
+    transform-origin: bottom;
+    top: -190%;
+    transform: skewX(45deg) translateX(-30%);
+    scale: 0.8;
+
+    border-top-left-radius: 10%;
+    border-top-right-radius: 60% 100%;
+}
+.wingRight {
+    transform-origin: top;
+    bottom: -170%;
+    transform: skewX(-45deg);
+
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 60% 100%;
+}
+.planeTail::after {
+    content: "";
+    position: absolute;
+    height: 55%;
+    aspect-ratio: 1;
+    transform: skewX(0deg) rotate(-8deg);
+    right: -60%;
+    bottom: 4.5%;
+
+    background: radial-gradient(
+            circle at 100% 0%,
+            transparent 70%,
+            var(--planeColor) calc(70% + 0.5px)
+    );
+}
+
+.header .message-wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.header .message {
+    width: 50%;
+    height: 100%;
+    max-width: 500px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    display: flex;
+    font-size: 16px;
+    box-shadow: none;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    border: 3px solid transparent;
+}
+
+.header .neutral,
+.header .negative,
+.header .positive {
+    top: calc(100% + 10px);
+}
+
+.header .neutral .message {
+    border-color: darkorange;
+}
+
+.header .negative .message {
+    border-color: #db5858;
+}
+
+.header .positive .message {
+    border-color: rgb(0, 169, 64);
+}
+
+.header .neutral .message,
+.header .negative .message,
+.header .positive .message {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header svg.negative,
+.header svg.neutral,
+.header svg.positive {
+    opacity: 0;
+}
+
+.header .negative svg.negative {
+    opacity: 1;
+}
+
+.header .neutral svg.neutral {
+    opacity: 1;
+}
+
+.header .positive svg.positive {
+    opacity: 1;
+}
+
+.header .message > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .message .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.header .message .icon svg {
+    top: 10px;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.header .message svg.neutral {
+    fill: darkorange;
+}
+
+.header .message svg.negative {
+    fill: #db5858;
+}
+
+.header .message svg.positive {
+    fill: rgb(0, 169, 64);
+}
+
+.header .message .text {
+    width: 70%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header .message .close {
+    width: 15%;
+}
+
+.header .message .close button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .3s cubic-bezier(0.76, 0, 0.24, 1);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .message .close button:hover {
+    background-color: rgba(255, 140, 0, 0.2);
+}
+
+.header .message .close svg {
+    transition: all .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.header .message .close button:hover svg {
+    fill: #1E1F22;
+}
+
+@media (max-width: 900px) {
+    .header .header-a .text {
+        display: none;
+    }
+
+    .header .main-logo > * {
+        font-size: 25px;
+    }
+}

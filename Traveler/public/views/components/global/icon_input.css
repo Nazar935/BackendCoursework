@@ -1,0 +1,45 @@
+.icon-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon-input input, .icon-input textarea {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 50px 10px 25px;
+
+    background-color: #FFFFFF;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: rgba(0, 0, 0, 0.85);
+    transition: border-color 250ms, box-shadow 250ms, color 250ms;
+
+    outline: none;
+}
+
+.icon-input input:hover,
+.icon-input textarea:hover {
+    border-color: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.icon-input input:focus,
+.icon-input textarea:focus {
+    outline: none;
+    border-color: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 8px 16px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.icon-input i {
+    color: darkgray;
+    font-size: 30px;
+    position: absolute;
+    right: 5%;
+    height: 30px;
+    width: 30px;
+    pointer-events: none;
+}

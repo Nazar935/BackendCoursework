@@ -1,0 +1,73 @@
+.facilities-filter {
+    width: 90% !important;
+}
+
+.facilities-select {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.facilities-select label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.facilities-select .check {
+    padding: 5px;
+    transition: 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+    border-radius: 5px;
+}
+
+.facilities-select .check:hover {
+    background: rgba(255, 140, 0, 0.2);
+}
+
+.facilities-select .check .check-box svg:first-child {
+    display: inherit;
+}
+
+.facilities-select .check .check-box svg:last-child {
+    display: none;
+    fill: darkorange;
+    background-color: transparent;
+}
+
+.facilities-select .check.checked svg:first-child {
+    display: none;
+}
+
+.facilities-select .check.checked svg:last-child {
+    display: inherit;
+}
+
+.facilities-select .check.checked {
+    transform: translateX(10px);
+}
+
+.facilities-select .check-box,
+.facilities-select .icon {
+    width: 12%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facilities-select .check-box {
+    margin-right: 5px;
+}
+
+.facilities-select .icon {
+    margin-right: 2px;
+}
+
+.facilities-select .text {
+    width: 76%;
+    height: 100%;
+    font-size: 15px;
+}

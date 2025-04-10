@@ -1,0 +1,100 @@
+.search-bar {
+    width: 70%;
+    min-width: 1000px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+//padding: 2px;
+    column-gap: 5px;
+//border: 2px solid gray;
+//background-image: linear-gradient(92.88deg, #fcae4e 9.16%, darkorange 43.89%, #f58802 64.72%);
+    background: none;
+}
+
+.search-bar > * {
+    width: 100%;
+    position: relative;
+}
+
+.search-bar > *:first-child .search-bar-header {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.search-bar .search-button {
+    width: 125%;
+}
+
+.search-bar .search-button button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+.search-bar .search-bar-header {
+    background-color: #fcfcfc;
+//border: 2px solid gray;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    border: 2px solid transparent;
+}
+
+.search-bar .search-bar-header,
+.search-bar .search-button button {
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+}
+
+.search-bar .search-bar-header:hover {
+    cursor: pointer;
+}
+
+.search-bar .search-bar-header.open {
+    border-color: darkorange;
+}
+
+.search-bar .search-bar-header > i:first-child {
+    font-size: 25px;
+    color: gray;
+    text-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .search-bar-header:hover > i:first-child,
+.search-bar .search-bar-header.open > i:first-child{
+    color: darkorange;
+}
+
+.search-bar .search-bar-header span {
+    width: 100%;
+    font-size: 16px;
+}
+
+.search-bar .search-bar-header .arrow-wrapper {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 5px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .search-bar-header .arrow-wrapper i {
+    font-size: 20px;
+    color: gray;
+    transform: rotate(90deg);
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .search-bar-header:hover div,
+.search-bar .search-bar-header.open div {
+    background-color: lightgray;
+}
+
+.search-bar .search-bar-header.open div i {
+    transform: rotate(270deg);
+}
+
+.search-bar > * > button {
+    width: 100%;
+    height: 100%;
+}

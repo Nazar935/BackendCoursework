@@ -1,0 +1,16 @@
+.footer {
+    position: relative;
+    height: 25px;
+    font-size: 12px;
+    overflow: hidden;
+    background-color: #fcfcfc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 2px solid gray;
+
+    z-index: 9999;
+    //box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+}

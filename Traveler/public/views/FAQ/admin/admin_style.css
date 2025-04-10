@@ -1,0 +1,83 @@
+.faq .questions {
+    width: 75%;
+}
+
+.faq .question-header .h2 input {
+    font-weight: 500;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+}
+
+.faq .answer textarea {
+    resize: none;
+    width: calc(100% - 25px);
+    height: 10rem;
+    margin: 25px 10px 10px 10px;
+    font-size: 16px;
+}
+
+.faq .buttons {
+    padding-left: 10px;
+    width: 15%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.faq .buttons button {
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.faq .buttons button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.faq .buttons button svg,
+.faq .add-button-wrapper svg{
+    width: 30px;
+    height: 30px;
+    fill: gray;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.faq .buttons button:hover svg,
+.faq .add-button-wrapper button:hover svg {
+    fill: #1E1F22;
+}
+
+.faq .question.remove {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.faq .question .buttons.edit {
+    display: none;
+}
+
+.faq .add-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq .add-button-wrapper button {
+    padding: 0;
+    background-color: inherit;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.faq .add-button-wrapper button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.faq .add-button-wrapper svg {
+    width: 50px;
+    height: 50px;
+    fill: gray;
+}

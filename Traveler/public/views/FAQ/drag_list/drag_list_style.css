@@ -1,0 +1,23 @@
+.faq .drag-wrapper {
+    padding-right: 10px;
+    width: 15%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.faq .drag-wrapper button {
+    border: none;
+    background: inherit;
+    margin: 0;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.faq .drag-wrapper button:hover {
+    cursor: grab;
+    transform: translateY(-2px);
+}
+
+.faq .dragging {
+    opacity: 50%;
+}

@@ -1,0 +1,33 @@
+.save-button svg {
+    fill: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.save-button:not(.saved) svg:nth-child(2) {
+    display: none;
+}
+
+.save-button.saved svg:nth-child(1) {
+    display: none;
+}
+
+.save-button,
+.tour-view .info .info-header .right button {
+    border-radius: 5px;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfcfc;
+    transition: 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.save-button:hover {
+    background-color: #FCF0E2 !important;
+}

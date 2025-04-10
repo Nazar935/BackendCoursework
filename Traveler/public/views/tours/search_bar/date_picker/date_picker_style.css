@@ -1,0 +1,182 @@
+.search-bar .date-picker {
+    width: 180% !important;
+    left: -40%;
+}
+
+.search-bar .date-picker .drop-menu {
+    width: max-content !important;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none !important;
+    overflow: visible !important;
+    row-gap: 5px;
+    margin: 0 auto;
+}
+
+.search-bar .date-picker .drop-menu > * {
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+}
+
+.search-bar .date-picker .date-panel {
+    padding: 5px;
+}
+
+.search-bar .date-picker td {
+    width: 36px;
+    height: 32px;
+    text-align: center;
+}
+
+.search-bar .date-picker td button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.1s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .date-picker td button.this-month {
+    box-shadow: rgba(50, 50, 93, 0.2) 0 1px 2px;
+}
+
+.search-bar .date-picker td button.this-month:not(.disabled) {
+    background-color: #e9e9e9;
+}
+
+.search-bar .date-picker td button.this-month {
+    background-color: #f0f0f0;
+}
+
+.search-bar .date-picker td button:not(.disabled):hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.search-bar .date-picker td button.selected {
+    background-color: darkorange !important;
+    color: white;
+}
+
+.search-bar .date-picker .table-header {
+    font-size: 14px;
+}
+
+.search-bar .date-picker .top-panel {
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar .date-picker .top-panel .button-wrapper {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar .date-picker .top-panel button {
+    width: 25px;
+    height: 25px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .date-picker .top-panel button:not([disabled]):hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.search-bar .date-picker .top-panel button.previous-month {
+    transform: rotate(-90deg);
+}
+
+.search-bar .date-picker .top-panel button.next-month {
+    transform: rotate(90deg);
+}
+
+.search-bar .date-picker .date-panel {
+    //max-height: 260px;
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .date-picker .date-table {
+    overflow: hidden;
+}
+
+.search-bar .date-picker .date-table tbody {
+    position: relative;
+    //height: 200px !important;
+    //width: 262px !important;
+}
+
+.search-bar .date-picker .date-table tbody td {
+    width: 36px !important;
+    height: 35px !important;
+    border-collapse: collapse;
+}
+
+.search-bar .date-picker .date-table tbody tr {
+    //width: 262px !important;
+}
+
+.search-bar .date-picker .date-table tr {
+    transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    width: 100%;
+}
+
+.search-bar .date-picker .top-panel .current-month {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.search-bar .date-picker .top-panel .current-month .animation-wrapper {
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-bar .date-picker .top-panel .current-month .animation-wrapper.month {
+    width: 50%;
+}
+
+.search-bar .date-picker .top-panel .current-month .animation-wrapper.year {
+    width: 30%;
+}
+
+.search-bar .date-picker .top-panel .current-month .animation-wrapper .current {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.search-bar .date-picker .top-panel .current-month .animation-wrapper .animation {
+    position: absolute;
+    left: 0;
+    top: -100%;
+}
+
+@keyframes header-animation-forwards {
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes header-animation-backwards {
+    100% {
+        transform: translateY(100%);
+    }
+}

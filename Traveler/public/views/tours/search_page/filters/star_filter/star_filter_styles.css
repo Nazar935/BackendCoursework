@@ -1,0 +1,48 @@
+.stars-select {
+    display: flex;
+    flex-direction: row;
+}
+
+.stars-select .star svg {
+    fill: darkorange;
+    width: 32px;
+    height: 32px;
+}
+
+.stars-select .star svg:first-child {
+    display: inherit;
+}
+
+.stars-select .star svg:last-child {
+    display: none;
+}
+
+.stars-select .selected .star svg:first-child {
+    display: none;
+}
+
+.stars-select .selected .star svg:last-child {
+    display: inherit;
+}
+
+.stars-select button {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.stars-select button.disabled {
+    cursor: unset;
+    pointer-events: none;
+}
+
+.stars-select button:hover {
+    background-color: rgba(255, 140, 0, 0.2);
+}

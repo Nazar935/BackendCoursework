@@ -1,0 +1,112 @@
+.search-bar .number-select .drop-down {
+    width: 150%;
+    left: -25%;
+}
+
+.search-bar .number-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcfcfc;
+}
+
+.search-bar .number-input input[type="number"]::-webkit-inner-spin-button,
+.search-bar .number-input input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.search-bar .number-input input[type="number"] {
+    -moz-appearance: textfield;
+    width: 100%;
+    text-align: center;
+}
+
+.search-bar .drop-down.number-picker .number-input {
+    height: 50px;
+}
+
+.search-bar .drop-down.number-picker .number-input .button-wrapper {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar .drop-down.number-picker .number-input .input-wrapper {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar .drop-down.number-picker .number-input .input-wrapper input {
+    width: 80%;
+    font-size: 16px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid lightgray;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .drop-down.number-picker .number-input .input-wrapper input:hover {
+    border-bottom-color: gray;
+}
+
+.search-bar .drop-down.number-picker .number-input .input-wrapper input:focus,
+.search-bar .drop-down.number-picker .number-input .input-wrapper input:active {
+    border-bottom-color: darkorange;
+}
+
+.search-bar .drop-down .number-input button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .drop-down .number-input button i {
+    color: gray;
+    text-shadow: rgba(0, 0, 0, 0.16) 0 2px 8px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.search-bar .drop-down .number-input button:hover {
+    background-color: lightgray;
+    transform: translateY(-2px);
+}
+
+.search-bar .drop-down .number-input button:active {
+    transform: translateY(0);
+}
+
+.search-bar .drop-down .number-input button:hover i {
+    color: #fcfcfc;
+}
+
+.search-bar .number-select .line {
+    height: 80%;
+    border: 2px dashed lightgray;
+    transform: scaleX(50%);
+}
+
+.search-bar .number-select .select-button i {
+    color: darkorange !important;
+    text-shadow: none !important;
+}
+
+.search-bar .number-select .select-button:hover {
+    background-color: darkorange !important;
+}
+
+.search-bar .number-select .select-button:hover i {
+    color: #fcfcfc !important;
+}

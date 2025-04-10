@@ -1,0 +1,161 @@
+.file-input input[type=file] {
+    display: none;
+}
+
+.file-input label {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border: 3px dashed #c2c2c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: none;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.file-input label:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.file-input label i {
+    color: #c2c2c2;
+    font-size: 36px;
+}
+
+.file-input .file-header {
+    margin-top: 5px;
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.display-wrapper.file-input {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-wrapper.file-input .image-wrapper {
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.display-wrapper.file-input .image-wrapper.hide-controllers {
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+}
+
+.file-input .image-wrapper:not(.hide-controllers) {
+    width: 100%;
+}
+
+.file-input .image-wrapper .bg {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
+.file-input .image-wrapper .bg img,
+.file-input .image-wrapper .bg video {
+    height: 100%;
+    max-width: 100%;
+    width: max-content;
+    object-fit: cover;
+}
+
+.file-input .image-wrapper label {
+    z-index: 2;
+}
+
+.file-input .image-wrapper .bg .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.file-input .image-wrapper.hide-controllers label,
+.file-input .image-wrapper .bg .filter {
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.file-input .image-wrapper.hide-controllers:hover label,
+.file-input .image-wrapper.hide-controllers:hover .bg .filter {
+    opacity: 1;
+}
+
+.file-input.small {
+    width: 25%;
+    height: unset;
+}
+
+.file-input.small .image-wrapper {
+    /*width: 50px;
+    height: 50px;*/
+    border-radius: 5px;
+}
+
+.file-input.small .image-wrapper.hide-controllers {
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+}
+
+
+
+.country-editor input[type=text],
+.text-input {
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: #000000 !important;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+
+    outline: none;
+}
+
+.country-editor input[type=text]:hover,
+.text-input:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.country-editor input[type=text]:focus,
+.text-input:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 8px 16px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+
+.file-input.small label {
+    width: 36px;
+    height: 36px;
+}
+
+.file-input.small .image-wrapper.hide-controllers label:hover {
+    transform: none;
+}
+
+.file-input.small label i {
+    font-size: 20px;
+}

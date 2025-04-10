@@ -1,0 +1,184 @@
+.user-view-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-view-wrapper h1 {
+    margin: 0 0 -50px 0;
+    padding-bottom: 50px;
+}
+
+.user-view {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+    margin-bottom: 50px;
+}
+
+.user-view .saved-tours {
+    position: relative;
+    min-height: 250px;
+    max-width: 800px;
+}
+
+.user-view .saved-tours .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    padding-top: 30px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: gray;
+}
+
+.user-view .profile {
+    width: 80%;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+}
+
+.user-view .saved-tours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-view .saved-tours-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin-bottom: 25px;
+}
+
+.user-view .saved-tours-wrapper .tour-wrapper {
+    height: 150px !important;
+}
+
+.user-view .row h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 25px 0;
+}
+
+.user-view .profile {
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+.user-view .profile .profile-picture {
+    width: 20%;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-view .profile .info {
+    width: 60%;
+    height: 100%;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.user-view .profile .info .banned {
+    font-size: 20px;
+    font-weight: 500;
+    color: #db5858;
+}
+
+.user-view .profile .logout {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-view .profile .logout .button{
+    min-width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.user-view .profile .logout .button:hover {
+    background-color: rgba(255, 140, 0, 0.2);
+}
+
+.user-view .profile .logout .button span {
+    font-size: 40px;
+    transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.user-view .profile .logout .button:hover span {
+    color: #db5858;
+}
+
+.user-view .profile .logout .button.unblock:hover span {
+    color: rgb(0, 169, 64);
+}
+
+
+.user-view .profile .info .username {
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.user-view .profile .info .description {
+    font-size: 14px;
+    color: gray;
+}
+
+.user-view .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+.user-view .row > *  {
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+}
+
+.user-view .booking-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-view .booking-list-wrapper .booking-list {
+    overflow: unset;
+    height: unset;
+    min-height: 250px;
+    padding-bottom: 25px;
+}
+
+.user-view .booking-list-wrapper .booking {
+    padding: 5px 10px;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+    border-radius: 10px;
+}

@@ -1,0 +1,43 @@
+.error-page {
+    width: 100%;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-page .image-wrapper {
+    height: 64%;
+    margin-top: 50px;
+    position: relative;
+}
+
+.error-page .image-wrapper img {
+    height: 100%;
+}
+
+.error-page .image-wrapper .error-code {
+    font-weight: bold;
+    position: absolute;
+    font-size: 100px;
+    color: white;
+    left: 25%;
+    top: 52%;
+}
+
+.error-page .error-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-page .error-text h2 {
+    font-size: 32px;
+}
+
+.error-page .error-text {
+    font-size: 20px;
+}

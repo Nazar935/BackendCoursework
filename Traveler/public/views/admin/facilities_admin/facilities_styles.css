@@ -1,0 +1,136 @@
+.facilities-admin {
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.4) 0 1px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-admin h2 {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-weight: 500;
+}
+
+.facilities-admin .facilities {
+    width: 90%;
+    height: 250px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: lightgray transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-admin .line {
+    width: 55%;
+    border-bottom: 2px dashed lightgray;
+    transform: scaleX(1.5);
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 2px 8px;
+}
+
+.facilities-admin .add-button {
+    width: 50%;
+}
+
+.facilities-admin .facility {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    padding: 0 5px;
+}
+
+.facilities-admin .facility .index {
+    width: 5%;
+    text-align: center;
+}
+
+.facilities-admin .facility .icon {
+    width: 10%;
+    display: flex;
+    justify-content: right;
+}
+
+.facilities-admin .facility .name {
+    width: 50%;
+}
+
+.facilities-admin .facility .buttons {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.facilities-admin .facility .buttons button {
+    width: 30px;
+    height: 30px;
+}
+
+.facility-popup {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.facility-popup h2 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.facility-popup .new-facility {
+    width: 75%;
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.facility-popup .new-facility .file-input {
+    width: 25%;
+    height: 64px;
+
+}
+
+.facility-popup .new-facility .input-wrapper {
+    width: 75%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facility-popup .new-facility .input-wrapper .text-input {
+    width: 100%;
+    font-size: 16px;
+}
+
+.facility-popup .accent-button {
+    width: 150px;
+    height: 36px;
+    font-size: 16px;
+}
+
+.facility-popup .accent-button span {
+    font-size: 16px;
+}
+
+.facility-popup .form-error-wrapper {
+    width: 90%;
+    margin-bottom: 15px;
+}
